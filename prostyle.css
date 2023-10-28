@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer{
+    display: grid;
+    width: 100vw;
+     height: 760px;
+      position: relative
+}
+.Rectangle10{
+    width: 100vw; height: 659.67px; left: 0px; top: 100.33px; position: absolute; background: #204E84
+}

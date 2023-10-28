@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7aa9e24284.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
     <title>Document</title>
@@ -19,42 +20,99 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-black">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+  <img class="bg-image" src="Bg-header.svg" alt="background-nav">
+
+    
+  <header id="header" class="header align-items-center">
+      
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+          
+  
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="Logo-nav.svg" alt="">
+          <!-- <h1>Append</h1>
+          <span>.</span> -->
+        </a>
+  
+        <!-- Nav Menu -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li class="active dropdown has-dropdown"><a href="#"><span>البرامج والخدمات</span> <i class="bi bi-chevron-down"></i></a>
+              <ul class="dd-box-shadow">
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul class="dd-box-shadow">
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li class="dropdown has-dropdown"><a href="#"><span>المركز الإعلامي</span> <i class="bi bi-chevron-down"></i></a>
+              <ul class="dd-box-shadow">
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul class="dd-box-shadow">
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#contact">الأنظمة واللوائح</a></li>
+            <li class="dropdown has-dropdown"><a href="#"><span>أنظمة آخرى</span> <i class="bi bi-chevron-down"></i></a>
+              <ul class="dd-box-shadow">
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul class="dd-box-shadow">
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+          </ul>
+  
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav><!-- End Nav Menu -->
+  
+        <a class="btn btn-primary" href="index.html#about">تسجيل الدخول</a>
+        <button id="collapse" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img class="navbar-toggler-icon h-50 w-50" src="Offcanvas Menu.svg" alt="burger-menu">
+        </button>
+        <div class="offcanvas offcanvas-top" id="navbarToggleExternalContent"  data-bs-theme="dark">
+          <div class="bg-color-navmenu">
+          <div class="p-4">
+              <div class="offcanvas-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="collapse" aria-label="Close"></button>
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                </div>
+            <span class="text-body-secondary">Toggleable via the navbar brand.</span>
           </div>
+      </div>
         </div>
-      </nav>
+        
+      </div>
+
       <!--Cards-->
 
 
@@ -94,97 +152,120 @@
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
           </div>
+          
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="moard.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="moard.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="moard.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="moard.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="moard.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          
         </div>
       </div>
 
       <!-- Footer -->
-<footer class=" text-center text-white" style="background-color:#204E84;">
-    <!-- Grid container -->
-    <div class="container p-4">
-  
-      
-  
-  
-  
-      <!-- Section: Text -->
-
-      <section class="mb-4">
-        <p class="col-lg-4">
-          يعمل صندوق تنمية الموارد البشرية على تركيز الجهود لرفع مهارات الكوادر البشـرية الوطنية وتزويدها بالمعرفة والتأهيل وموائمتها مع احتياجات سوق العمل والوظائف مع تـبني نهج يضـع النتائـج المتحققـة للمستفيد كمحـور في تـصميم وتقديـم الأعمال والخدمات والسعـي للارتقاء بمنظومة الموارد البشرية في المملكة العربية السعودية من خلال توظيف الرؤى ورسم الـتوجهات المستقبليـة لسوق العمل وتقديم الخدمات للمستفيدين ضمن حزمة برامج مركزة تراعي احتياجات المستفيد وتلبي متطلباته
-        </p>
-      </section>
-      <!-- Section: Text -->
-  
-  
-      <!-- Section: Links -->
-      <section class="container">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-             <!-- Section: Social media -->
-  <section class="m-4 ">
-    <!-- Facebook -->
-    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-
-    <!-- Twitter -->
-    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-
-    <!-- Google -->
-    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
-
-    <!-- Instagram -->
-    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-
-    <!-- Linkedin -->
-    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-
-  </section>
-  <!-- Section: Social media -->
-          </div>
-          <!--Grid column-->
-  
-          
-  
-         
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">الصفحات</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">الصفحة الرئيسية</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">المركز الاعلامي</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">البرامج والخدمات</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">انظمه آخرى<img src="down.png" alt=""></a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
+      <footer  class="text-center text-lg-start bg-light text-muted"></footer>
+        <div class="LogoBlock" style="width: 80vw; height: 173px; position: relative">
+        
+        <div class="container text-center text-md-start mt-5" style="width: 90vw; height: 173px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 0px 4px 4px white; border-radius: 15px"></div>
+        <div class="PartnerLogo" style="width: 938px; height: 115px; left: 87px; top: 29px; position: absolute">
+          <img class="Image129" style="width: 230px; height: 115px; left: 708px; top: 0px; position: absolute; border-radius: 15px" src="moard.png" />
+          <img class="Image131" style="width: 217.70px; height: 115px; left: 0px; top: 0px; position: absolute; border-radius: 15px" src="bank.png" />
+          <img class="Image132" style="width: 201px; height: 115px; left: 487px; top: 0px; position: absolute; border-radius: 15px" src="Gosi.png" />
+          <img class="Image128" style="width: 230px; height: 115px; left: 237px; top: 0px; position: absolute; border-radius: 15px" src="hrdf.png" />
         </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-
- 
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-white" href="">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
+      </div>
+      <div class="Footer" style="width: 100vw; height: 760px; position: relative">
+        <div class="Rectangle10" style="width: 100vw; height: 659.67px; left: 0px; top: 100.33px; position: absolute; background: #204E84"></div>
+        <div class="CallToAction" style="width: 100wv; height: 322.73px; left: 50px; top: 0px; position: absolute">
+          <div class="Rectangle8" style="width: 90vw; height: 322.73px; left: 0px; top: 0px; position: absolute; background: #01A08C; border-radius: 10px"></div>
+          <div style="width: 80vw; height: 75.25px; left: 114px; top: 86.12px; position: absolute; text-align: right; color: white; font-size: 60px; font-family: Poppins; font-weight: 900; text-transform: uppercase; letter-spacing: 4.20px; word-wrap: break-word">لنبدأ بتحسين مسارك المهني ...</div>
+          <div class="Button" style="width: 19wv; height: 61.03px; left: 900px; top: 214.02px; position: absolute">
+            <button class="Rectangle2" style="width: 15vmax; height: 61.03px; left: 0px; top: 0px; position: absolute; background: #204E84; border-radius: 10px ;text-align: center; color: white; font-size: 15px; font-family: Poppins; font-weight: 600; text-transform: uppercase; letter-spacing: 1.50px; word-wrap: break-word">تواصل معنا</button>
+          </div>
+        </div>
+        <div class="FooterMenu" style="width: 80vw; height: 257.73px; left: 254px; top: 372.89px; position: absolute">
+          <div class="Information container-lg" style="width: 493px; height: 257.73px; left: 373px; top: 0px; position: absolute">
+            <div style="width: 30vmax; height: 31.77px; left: -50px; top: 0px; position: absolute; text-align: right; color: white; font-size: 25px; font-family: Poppins; font-weight: 900; text-transform: uppercase; letter-spacing: 1.75px; word-wrap: break-word">نظرة عامة</div>
+            <div style="width: 493px; height: 152.17px; left: -50px; top: 44.31px; position: absolute; text-align: right; color: white; font-size: 17px; font-family: Poppins; font-weight: 400; word-wrap: break-word">يعمل صندوق تنمية الموارد البشرية على تركيز الجهود لرفع مهارات الكوادر البشـرية الوطنية وتزويدها بالمعرفة والتأهيل وموائمتها مع احتياجات سوق العمل والوظائف مع تـبني نهج يضـع النتائـج المتحققـة للمستفيد كمحـور في تـصميم وتقديـم الأعمال والخدمات والسعـي للارتقاء بمنظومة الموارد البشرية في المملكة العربية السعودية من خلال توظيف الرؤى ورسم الـتوجهات المستقبليـة لسوق العمل وتقديم الخدمات للمستفيدين ضمن حزمة برامج مركزة تراعي احتياجات المستفيد وتلبي متطلباته</div>
+            <div class="SocialIcon" style="width: 122.54px; height: 29.26px; left: 0px; top: 228.47px; position: absolute">
+              <div style="width: 21.63px; height: 29.26px; left: 0px; top: 0px; position: absolute; color: #757575; font-size: 30px; font-family: Font Awesome 5 Brands; font-weight: 400; word-wrap: break-word"><i class="fa-brands fa-linkedin"></i></div>
+              <div style="width: 21.63px; height: 29.26px; left: 33.64px; top: 0px; position: absolute; color: #757575; font-size: 30px; font-family: Font Awesome 5 Brands; font-weight: 400; word-wrap: break-word"><i class="fa-brands fa-x-twitter"></i></div>
+              <div style="width: 21.63px; height: 29.26px; left: 67.28px; top: 0px; position: absolute; color: #757575; font-size: 30px; font-family: Font Awesome 5 Brands; font-weight: 400; word-wrap: break-word"><i class="fa-brands fa-facebook"></i></div>
+              <div style="width: 21.63px; height: 29.26px; left: 100.92px; top: 0px; position: absolute; color: #757575; font-size: 30px; font-family: Font Awesome 5 Brands; font-weight: 400; word-wrap: break-word"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+          </div>
+          <div class="Navigation" style="width: 324px; height: 168.89px; left: 0px; top: 0px; position: absolute">
+            <div style="width: 313px; height: 31.77px; left: 0px; top: 0px; position: absolute; text-align: right; color: white; font-size: 25px; font-family: Poppins; font-weight: 900; text-transform: uppercase; letter-spacing: 1.75px; word-wrap: break-word">الصفحات</div>
+            <div class="IconList" style="width: 304px; height: 124.58px; left: 20px; top: 44.31px; position: absolute">
+              <div class="List" style="width: 304px; height: 21.74px; left: 0px; top: 0px; position: absolute">
+                <div style="width: 289px; height: 21.74px; left: 0px; top: 0px; position: absolute; text-align: right; color: white; font-size: 17px; font-family: Poppins; font-weight: 400; word-wrap: break-word"> <img src="down.png" alt=""> الصفحة الرئيسية</div>
+              </div>
+              <div class="List" style="width: 304px; height: 22.57px; left: 0px; top: 34.28px; position: absolute">
+                <div style="width: 289px; height: 21.74px; left: 0px; top: 0px; position: absolute; text-align: right; color: white; font-size: 17px; font-family: Poppins; font-weight: 400; word-wrap: break-word"> <img src="down.png" alt=""> عنا</div>
+              </div>
+              <div class="List" style="width: 304px; height: 21.74px; left: 0px; top: 68.56px; position: absolute">
+                <div style="width: 289px; height: 21.74px; left: 0px; top: 0px; position: absolute; text-align: right; color: white; font-size: 17px; font-family: Poppins; font-weight: 400; word-wrap: break-word"> <img src="down.png" alt=""> خدماتنا </div>
+              </div>
+              <div class="List" style="width: 304px; height: 21.74px; left: 0px; top: 102.84px; position: absolute">
+                <div style="width: 289px; height: 21.74px; left: 0px; top: 0px; position: absolute; text-align: right; color: white; font-size: 17px; font-family: Poppins; font-weight: 400; word-wrap: break-word"> <img src="down.png" alt=""> مشاريعنا</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Line3" style="width: 100vw; height: 0px; left: 50px; top: 690.61px; position: absolute; border: 1px rgba(255, 255, 255, 0.25) solid"></div>
+        <div class="AllrightReservedHrdf" style="width: 236px; height: 19.23px; left: 50px; top: 715.69px; position: absolute; color: white; font-size: 15px; font-family: Poppins; font-weight: 600; text-transform: uppercase; letter-spacing: 1.50px; word-wrap: break-word">Allright Reserved - HRDF</div>
+        <div class="SitePolicy" style="width: 330px; height: 19.23px; left: 1079px; top: 715.69px; position: absolute">
+          <div style="width: 143px; height: 19.23px; left: 0px; top: 0px; position: absolute; color: white; font-size: 15px; font-family: Poppins; font-weight: 600; text-transform: uppercase; letter-spacing: 1.50px; word-wrap: break-word">القيود والخصوصية</div>
+          <div style="width: 128px; height: 19.23px; left: 202px; top: 0px; position: absolute; color: white; font-size: 15px; font-family: Poppins; font-weight: 600; text-transform: uppercase; letter-spacing: 1.50px; word-wrap: break-word">شروط الاستخدام</div>
+        </div>
+      </div>
+    
+    </footer>
   <!-- Footer -->
 
 </body>
