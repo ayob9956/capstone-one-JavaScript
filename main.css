@@ -23,7 +23,7 @@
   --background-color-rgb: 255, 255, 255;
   --default-color: #212529;
   --default-color-rgb: 33, 37, 41;
-  --primary-color: #e84545;
+  --primary-color:#204E84;
   --primary-color-rgb: 232, 69, 69;
   --secondary-color: #32353a;
   --secondary-color-rgb: 50, 53, 58;
@@ -34,9 +34,9 @@
 /* Nav Menu Colors */
 :root {
   --nav-color: #3a3939;
-  --nav-hover-color: #e84545;
+  --nav-hover-color: #204E84;
   --nav-dropdown-color: #3a3939;
-  --nav-dropdown-hover-color: #e84545;
+  --nav-dropdown-hover-color: #204E84;
   --nav-dropdown-background-color: #ffffff;
   --nav-mobile-background-color: #ffffff;
 }
@@ -62,7 +62,7 @@ a {
 }
 
 a:hover {
-  color: rgba(var(--primary-color-rgb), 0.7);
+  color: #204E84;
   text-decoration: none;
 }
 
@@ -233,7 +233,7 @@ section {
   --background-color: #ffffff;
   --secondary-color: #444444;
   --nav-color: #444444;
-  --nav-hover-color: #e84545;
+  --nav-hover-color: #204E84;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -264,7 +264,7 @@ section {
   --background-color: #ffffff;
   --secondary-color: #444444;
   --nav-color: #444444;
-  --nav-hover-color: #d83535;
+  --nav-hover-color: #204E84;
 }
 
 /*--------------------------------------------------------------
