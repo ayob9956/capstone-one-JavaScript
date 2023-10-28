@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+body {
+    height: 200vh;
+}
+.bg-image {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.bg-color-navmenu {
+    --bs-offcanvas-bg: #204E84;
+    background-color: #204E84;
+    height: 100%;
+    
+}

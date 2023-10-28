@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+</head>
+<body>
+
+    <img class="bg-image" src="Bg-header.svg" alt="background-nav">
+
+    
+    <header id="header" class="header align-items-center">
+        
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="Logo-nav.svg" alt="">
+            <!-- <h1>Append</h1>
+            <span>.</span> -->
+          </a>
+    
+          <!-- Nav Menu -->
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li class="active dropdown has-dropdown"><a href="#"><span>البرامج والخدمات</span> <i class="bi bi-chevron-down"></i></a>
+                <ul class="dd-box-shadow">
+                  <li><a href="#">Dropdown 1</a></li>
+                  <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dd-box-shadow">
+                      <li><a href="#">Deep Dropdown 1</a></li>
+                      <li><a href="#">Deep Dropdown 2</a></li>
+                      <li><a href="#">Deep Dropdown 3</a></li>
+                      <li><a href="#">Deep Dropdown 4</a></li>
+                      <li><a href="#">Deep Dropdown 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dropdown 2</a></li>
+                  <li><a href="#">Dropdown 3</a></li>
+                  <li><a href="#">Dropdown 4</a></li>
+                </ul>
+              </li>
+              <li class="dropdown has-dropdown"><a href="#"><span>المركز الإعلامي</span> <i class="bi bi-chevron-down"></i></a>
+                <ul class="dd-box-shadow">
+                  <li><a href="#">Dropdown 1</a></li>
+                  <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dd-box-shadow">
+                      <li><a href="#">Deep Dropdown 1</a></li>
+                      <li><a href="#">Deep Dropdown 2</a></li>
+                      <li><a href="#">Deep Dropdown 3</a></li>
+                      <li><a href="#">Deep Dropdown 4</a></li>
+                      <li><a href="#">Deep Dropdown 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dropdown 2</a></li>
+                  <li><a href="#">Dropdown 3</a></li>
+                  <li><a href="#">Dropdown 4</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html#contact">الأنظمة واللوائح</a></li>
+              <li class="dropdown has-dropdown"><a href="#"><span>أنظمة آخرى</span> <i class="bi bi-chevron-down"></i></a>
+                <ul class="dd-box-shadow">
+                  <li><a href="#">Dropdown 1</a></li>
+                  <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul class="dd-box-shadow">
+                      <li><a href="#">Deep Dropdown 1</a></li>
+                      <li><a href="#">Deep Dropdown 2</a></li>
+                      <li><a href="#">Deep Dropdown 3</a></li>
+                      <li><a href="#">Deep Dropdown 4</a></li>
+                      <li><a href="#">Deep Dropdown 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dropdown 2</a></li>
+                  <li><a href="#">Dropdown 3</a></li>
+                  <li><a href="#">Dropdown 4</a></li>
+                </ul>
+              </li>
+            </ul>
+    
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav><!-- End Nav Menu -->
+    
+          <a class="btn btn-primary" href="index.html#about">تسجيل الدخول</a>
+          <button id="collapse" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="navbar-toggler-icon h-50 w-50" src="Offcanvas Menu.svg" alt="burger-menu">
+          </button>
+          <div class="offcanvas offcanvas-top" id="navbarToggleExternalContent"  data-bs-theme="dark">
+            <div class="bg-color-navmenu">
+            <div class="p-4">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="collapse" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  </div>
+              <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+            </div>
+        </div>
+          </div>
+          
+        </div>
+        
+      </header>
+    
+      
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>
