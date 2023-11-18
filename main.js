@@ -80,33 +80,53 @@ loginbtn.addEventListener("click",function () {
     
 })
 
+let nav = document.getElementById("main-nav")
+let btn1 = document.getElementById("sin")
+btn1.className="btn btn-outline-light mx-2"
+let btn2 = document.getElementById("log")
+btn2.className="btn btn-outline-light mx-2"
     
-function login(email,password) {
-    
+function login(email, password) {
     fetch("https://65523ba35c69a7790329bd14.mockapi.io/store")
     .then(response => response.json())
-    .then(data=>{
-        data.forEach(element => {
-            console.log(element.email);
-            if (password === element.password && element.email === email) {
-                console.log(element);
-                stringg = "نورتنا!"
-                showToastlogin(stringg);
-                
-        displayBooks();
-               
-            }else{
-                stringg = "خطأ في تسجيل الدخول"
-                showToastlogin(stringg)
-            }
-            if (element.email==="aa1@gmail.com") {
-                const admin = true
-                
-            }
-        });
+    .then(data => {
+        let loginSuccessful = false;
+        let isAdmin = false;
         
+        for (const element of data) {
+            console.log(localStorage.getItem("user"));
+              if (password === element.password && email === element.email) {
+                loginSuccessful = true;
+                isAdmin = element.email === "aa1@gmail.com"; 
+                localStorage.setItem('user', JSON.stringify({ email: element.email, isAdmin: isAdmin }));
+                showToastlogin("نورتنا!");
+                console.log(loginSuccessful);
+                if (loginSuccessful) {
+                    if (btn1) btn1.className = 'hide'; 
+                    if (btn2) btn2.className = 'hide';
+                    let btn3 = document.createElement("button")
+                    btn1.remove();
+                    btn2.remove();
+                    btn3.innerText = "Log out";
+                    btn3.id = "logout"; // Assign an ID to the logout button for later use
+                    btn3.onclick = logout; // Assign the logout function to the onclick handler
+
+                    // Append the logout button to the navigation
+                    nav.appendChild(btn3);
+
+                }
+                break; // Stop the loop if user is found
+            }
+            
+            else if (!loginSuccessful) {
+                showToastlogin("خطأ في تسجيل الدخول");
+            }
+        }
     })
-}   
+    .catch(error => {
+        console.error('Login Error:', error);
+    });
+} 
 function showToastlogin(stringg) {
     var toast = document.getElementById("toast");
     toast.className = "show";
@@ -124,5 +144,18 @@ function showToastregester(stringg) {
     
     setTimeout(function(){
          toast.className = toast.className.replace("show", ""); }, 100);
+}
+
+
+
+function logout() {
+   
+    localStorage.removeItem('user');
+
+    // Redirect to login page or refresh the page to reflect the logout state
+  window.location.href = 'index.html'; 
+
+    // If you have any client-side state to clear, do it here
+    // For example, clear any displayed user information
 }
 
