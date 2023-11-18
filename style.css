@@ -64,7 +64,7 @@ body {
 }
 
 .box .image-placeholder-2 {
-  miwidth: 313px;
+  min-width: 313px;
   height: 252px;
   object-fit: cover;
   border-radius: 0.9rem;
