@@ -303,7 +303,7 @@
       
     </div>
 
-    <button type="button" class="btn btn-primary fixed-bottom w-25" data-bs-toggle="modal" data-bs-target="#exampleModal21">add new Post</button>
+    <button type="button" class="btn btn-primary fixed-bottom w-25" id="addPostBtn" data-bs-toggle="modal" data-bs-target="#exampleModal21">add new Post</button>
       
     <div class="modal fade" id="exampleModal21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -342,7 +342,12 @@
 
 
     <script>
+      let addPostBtn = document.getElementById("addPostBtn");
+      let local = JSON.parse(localStorage.getItem("user"))
 
+      if(!local.isAdmin){
+        addPostBtn.remove();
+      }
       function addPosts() {
       
       
@@ -373,6 +378,7 @@
           <h5 class="card-title">${modeltilte}</h5>
           <p class="card-text">${modelbody}</p>
           <a href="#!" class="btn btn-primary">قراءةالمزيد </a>
+          <a class="btn btn-danger" href="#!">delete !</a>
         </div>
       </div>
       
@@ -391,7 +397,7 @@
         
         let addPost = document.getElementById("addPost");
       
-      
+        
         fetch('https://65523ba35c69a7790329bd14.mockapi.io/blog')
             .then(response => response.json())
             .then((json) =>{
@@ -404,6 +410,7 @@
           <h5 class="card-title">${element.title}</h5>
           <p class="card-text">${element.body}</p>
           <a href="#!" class="btn btn-primary">قراءةالمزيد </a>
+          <a class="btn btn-danger" id="${element.id}" onClick="deletePost('${element.id}')" href="#!">Delete!</a>
         </div>
       </div>
       
