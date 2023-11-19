@@ -20,6 +20,11 @@
         padding: 0%;
     }
 </style>
+<script>
+  if (!localStorage.getItem("user")) {
+    window.location.href = "index.html"
+  }
+</script>
 </head>
 <body>
 
@@ -29,14 +34,13 @@
     
   <header id="header" class="header align-items-center">
       
-      <div class="container-fluid d-flex align-items-center justify-content-between">
+      <div id="main-nav" class="container-fluid d-flex align-items-center justify-content-between">
           
   
         <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
+
           <img src="Logo-nav.svg" alt="">
-          <!-- <h1>Append</h1>
-          <span>.</span> -->
+         
         </a>
   
         <!-- Nav Menu -->
@@ -99,8 +103,8 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav><!-- End Nav Menu -->
   
-        <button type="button" class="btn btn-outline-light mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">تسجيل الدخول</button>     
-       <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Register" >تسجيل جديد</button>
+        <button type="button" id="log" class="btn btn-outline-light mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">تسجيل الدخول</button>     
+       <button type="button" id="sig" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#Register" >تسجيل جديد</button>
         <button id="collapse" class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
           <img class="navbar-toggler-icon h-50 w-50" src="Offcanvas Menu.svg" alt="burger-menu">
         </button>
@@ -299,6 +303,131 @@
       
     </div>
 
+    <button type="button" class="btn btn-primary fixed-bottom w-25" data-bs-toggle="modal" data-bs-target="#exampleModal21">add new Post</button>
+      
+    <div class="modal fade" id="exampleModal21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">اضافة تدوينة جديدة</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">العنوان:</label>
+                <input type="text" class="form-control" id="modeltilte">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">محتوى التدوينة:</label>
+                <input type="text" class="form-control" id="modelbody">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">رابط صورة العرض:</label>
+                <input type="text" class="form-control" id="modelimg">
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            <button type="button" id="btn11" class="btn btn-primary">ارسال</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex gap-3 flex-wrap w-100" id="addPost">
+
+    </div>
+
+
+    <script>
+
+      function addPosts() {
+      
+      
+      document.getElementById("btn11").addEventListener("click",()=>{
+      
+      let modeltilte = document.getElementById("modeltilte").value;
+      let modelbody = document.getElementById("modelbody").value;
+      let modelimg = document.getElementById("modelimg").value;
+        fetch('https://65523ba35c69a7790329bd14.mockapi.io/blog', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            title:modeltilte, 
+            body:modelbody, 
+            img:modelimg}),
+      })
+      .then(response => response.json())
+      .then(() => {
+          let addPost = document.getElementById("addPost");
+      
+          // Use the variables directly without .value
+          addPost.insertAdjacentHTML('beforeend', `   <div class="col">
+      <div class="card h-100">
+        <img src="${modelimg}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${modeltilte}</h5>
+          <p class="card-text">${modelbody}</p>
+          <a href="#!" class="btn btn-primary">قراءةالمزيد </a>
+        </div>
+      </div>
+      
+    </div>`); 
+      })
+      .catch(() => {
+           stringg = "Registration Fuiled"
+           showToastregester(stringg)
+          });
+      
+      });
+      
+      }
+      
+      function displaypost() {
+        
+        let addPost = document.getElementById("addPost");
+      
+      
+        fetch('https://65523ba35c69a7790329bd14.mockapi.io/blog')
+            .then(response => response.json())
+            .then((json) =>{
+              console.log(json);
+              json.forEach(element => {
+                addPost.insertAdjacentHTML('beforeend', `  <div class="col">
+      <div class="card h-100 ">
+        <img src="${element.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${element.title}</h5>
+          <p class="card-text">${element.body}</p>
+          <a href="#!" class="btn btn-primary">قراءةالمزيد </a>
+        </div>
+      </div>
+      
+    </div>`);
+              });
+            } )
+      }
+      
+      addPosts();
+      displaypost();
+            
+      
+      function deletePost(id) {
+      
+        fetch(`https://65523ba35c69a7790329bd14.mockapi.io/blog/${id}`, {
+        method: 'DELETE',
+      });
+      
+      }
+      
+           
+      
+            
+          </script>
     </section>
     <footer class="" style="padding: 0px; margin: 0px;">
       <div class="LogoBlock" style="width: 99vw; height: 173px; display: flex; justify-content: center;">
