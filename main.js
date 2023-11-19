@@ -111,7 +111,7 @@ function login(email, password) {
         let nav = document.getElementById("main-nav")
         let btn1 = document.getElementById("sig")
         let btn2 = document.getElementById("log")
-
+        
         for (const element of data) {
             console.log(localStorage.getItem("user"));
               if (password === element.password && email === element.email) {
@@ -119,7 +119,7 @@ function login(email, password) {
                 isAdmin = element.email === "aa1@gmail.com"; 
                 localStorage.setItem('user', JSON.stringify({ email: element.email, isAdmin: isAdmin }));
                 showToastlogin("نورتنا!");
-                console.log(loginSuccessful);
+                console.log(localStorage.getItem("user"));
                 if (loginSuccessful) {
                     if (btn1) btn1.className = 'hide'; 
                     console.log(btn1);

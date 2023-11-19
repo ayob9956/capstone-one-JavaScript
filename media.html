@@ -373,6 +373,7 @@
           <h5 class="card-title">${modeltilte}</h5>
           <p class="card-text">${modelbody}</p>
           <a href="#!" class="btn btn-primary">قراءةالمزيد </a>
+          <a class="btn btn-danger" href="#!">delete !</a>
         </div>
       </div>
       
@@ -404,6 +405,7 @@
           <h5 class="card-title">${element.title}</h5>
           <p class="card-text">${element.body}</p>
           <a href="#!" class="btn btn-primary">قراءةالمزيد </a>
+          <a class="btn btn-danger" id="${element.id}" onClick="deletePost('${element.id}')" href="#!">Delete!</a>
         </div>
       </div>
       
