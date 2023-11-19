@@ -80,11 +80,26 @@ loginbtn.addEventListener("click",function () {
     
 })
 
-let nav = document.getElementById("main-nav")
-let btn1 = document.getElementById("sin")
-btn1.className="btn btn-outline-light mx-2"
-let btn2 = document.getElementById("log")
-btn2.className="btn btn-outline-light mx-2"
+if (localStorage.getItem("user")) {
+    let nav = document.getElementById("main-nav")
+    let btn1 = document.getElementById("sig")
+    let btn2 = document.getElementById("log")
+    console.log(btn1);
+    if (btn1) btn1.className = 'hide'; 
+    console.log(btn1);
+    if (btn2) btn2.className = 'hide';
+    let btn3 = document.createElement("button")
+    // btn1.remove();
+    // btn2.remove();
+    btn3.innerText = "تسجيل خروج";
+    btn3.id = "logout"; // Assign an ID to the logout button for later use
+    btn3.onclick = logout; // Assign the logout function to the onclick handler
+    btn3.className="btn btn-outline-light mx-2"
+
+    // Append the logout button to the navigation
+    nav.appendChild(btn3);
+
+}
     
 function login(email, password) {
     fetch("https://65523ba35c69a7790329bd14.mockapi.io/store")
@@ -93,6 +108,10 @@ function login(email, password) {
         let loginSuccessful = false;
         let isAdmin = false;
         
+        let nav = document.getElementById("main-nav")
+        let btn1 = document.getElementById("sig")
+        let btn2 = document.getElementById("log")
+
         for (const element of data) {
             console.log(localStorage.getItem("user"));
               if (password === element.password && email === element.email) {
@@ -103,13 +122,15 @@ function login(email, password) {
                 console.log(loginSuccessful);
                 if (loginSuccessful) {
                     if (btn1) btn1.className = 'hide'; 
+                    console.log(btn1);
                     if (btn2) btn2.className = 'hide';
                     let btn3 = document.createElement("button")
-                    btn1.remove();
-                    btn2.remove();
-                    btn3.innerText = "Log out";
+                    // btn1.remove();
+                    // btn2.remove();
+                    btn3.innerText = "تسجيل خروج";
                     btn3.id = "logout"; // Assign an ID to the logout button for later use
                     btn3.onclick = logout; // Assign the logout function to the onclick handler
+                    btn3.className="btn btn-outline-light mx-2"
 
                     // Append the logout button to the navigation
                     nav.appendChild(btn3);
